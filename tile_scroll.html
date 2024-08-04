@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid with Sticky Border</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: lavender;
+            overflow: hidden;
+        }
+        .grid-container {
+            display: grid;
+            gap: 2px;
+            width: 150vw; /* width should be larger than viewport */
+            height: 150vh; /* height should also be larger than viewport */
+        }
+        .tile {
+            width: 280px; /* tile width */
+            height: 280px; /* tile height */
+            background-color: #4CAF50; /* tile color */
+            z-index: 1;
+        }
+        .tile:hover {
+            box-shadow: 15px 15px 15px 15px white;
+        }
+        #map {
+            width: 95%;
+            height: 95%;
+            overflow: hidden;
+            margin: auto;
+        }
+        #mapContainer {
+            height: 100vh;
+            width: 100vw;
+            margin: auto;
+            padding-top: 35px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .sticky-border {
+            outline: 18px ridge rgba(170, 50, 220, .6);
+            border-radius: 2rem;
+            border-radius: 40px;
+        }
+        .modal-box {
+            height: 80vh;
+        }
+
+        .focused-tile {
+            height: inherit;
+            width: inherit;
+            opacity: 0.9;
+            z-index: 999;
+            position: relative;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+
+    <div id="responsiveArea">
+        <div id="mapContainer">
+            <div id="map" class="sticky-border">
+                <div class="grid-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="tile_scroll.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
