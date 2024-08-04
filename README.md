@@ -5,6 +5,8 @@ responsive to viewport size
 Hover near the border to move in any direction around the tile grid.
 Click a tile to expand it, move back to the border to close it.
 
+No animation libraries used.
+
 
 ## How it Works
 <img width="500" alt="omniscroll_illustration" src="https://github.com/user-attachments/assets/d2145f2b-6b6b-44a1-9afd-a8e724b926a9">
